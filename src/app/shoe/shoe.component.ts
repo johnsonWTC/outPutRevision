@@ -21,6 +21,25 @@ export class ShoeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  shoes : shoe [] = [
+    {
+      name : "nike",
+      color : "red",
+      size : 5
+    },
+    {
+      name : "Adidas",
+      color : "blue",
+      size : 7
+    },
+    {
+      name : "Puma",
+      color : "pink",
+      size : 2
+    }
+  ]
+
   
 
 }

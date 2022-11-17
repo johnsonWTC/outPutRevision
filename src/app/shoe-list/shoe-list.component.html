@@ -1,1 +1,10 @@
-<p>shoe-list works!</p>
+<table>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Size</th>
+    <tr *ngFor="let shoe of shoeList">
+        <td>{{shoe.name}}</td>
+        <td>{{shoe.color}}</td>
+        <td>{{shoe.size}}</td>
+    </tr>
+</table>
