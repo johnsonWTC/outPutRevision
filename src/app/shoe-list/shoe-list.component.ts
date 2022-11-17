@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { shoe } from '../shoe/shoe.component';
 
 @Component({
@@ -11,8 +11,13 @@ export class ShoeListComponent implements OnInit {
   constructor() { }
 
 
-  @Input() shoeList :shoe [] = []
+  @Input() shoeList :shoe [] = [];
+  @Output() shoeListOutPut = new  EventEmitter<shoe>()
   ngOnInit(): void {
+  }
+
+  ReturnSelectedShoe(shoe :shoe){
+    this.shoeListOutPut.emit(shoe);
   }
 
 }
